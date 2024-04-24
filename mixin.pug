@@ -8,11 +8,11 @@ mixin createMenu(menu, active)
 mixin createBar(menu)
     each value, key in menu
         a(href= value)
-            img(src=key)
+            img(src="img/"+key)
 
 mixin createBarTitle(menu)
     each value, key in menu
-        a(href= value)= key
+        a(href=value)=key
 
 mixin createButtons(list)
     each value, key in list
