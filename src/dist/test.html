@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тест</title>
+    <link rel="stylesheet" href="styles/template.css">
+    <link rel="stylesheet" href="styles/test.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+  </head>
+  <body>
+    <nav>
+      <div class="bar"><a href="map.html">&#9776</a></div>
+      <div class="menu"><a href="index.html">Главная</a><a href="lk.html">Войти</a>
+      </div>
+    </nav>
+    <div class="sidenav"><a href="index.html"><img src="img/home.png"/></a><a href="lk.html"><img src="img/lk.png"/></a><a href="map.html"><img src="img/mapicon.png"/></a><a href="chansha.html">Хунань 湖南</a><a href="chanshaFood.html">Еда 中国菜</a>
+    </div>
+    <div class="page">
+      <header>
+        <h1>Тест</h1>
+      </header>
+      <div class="test">
+        <div><img src="img/meat2.jpg"></div>
+        <div> 
+          <form id="testForm">
+            <div class="form">湘西酸肉</div>
+            <div class="form">xiāngxī suānròu</div>
+            <div class="form">
+              <input type="text" id="test1" placeholder="Напишите перевод">
+            </div>
+            <div class="form">
+              <input type="submit" value="Ответить" id="sub">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="test hidden">
+        <div><img src="img/meat.jpg"></div>
+        <div> 
+          <form id="testForm2">
+            <div class="form">Тушенное мясо </div>
+            <div class="form">по рецепту семьи Мао</div>
+            <div class="form">
+              <input type="text" id="test2" placeholder="Напишите перевод иероглифами">
+            </div>
+            <div class="form">
+              <input type="submit" value="Ответить" id="sub2">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="next">
+        <input type="image" src="img/testArrowRight.png" alt="" onClick="next()">
+      </div>
+      <div class="test2 hidden">Тест пройден!</div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="scripts/scroll.js"></script>
+  <script src="scripts/test.js"></script>
+</html>

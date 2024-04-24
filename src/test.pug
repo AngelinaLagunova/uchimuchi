@@ -1,0 +1,51 @@
+extends templates/template.pug
+include templates/mixin.pug 
+
+block variables
+    - var dictMenu = {'Главная': 'index.html', 'Войти': "lk.html"} //войти должно смениться на выйти после авторизации/регистрации
+    - var dictBar = {'home.png': 'index.html', 'lk.png': "lk.html", 'mapicon.png': 'map.html'} //если пользователь не авторизовон, то лк перекидавает на войти
+    - var head = "Тест"
+    - var title = "Тест"
+    - var css = 'styles/test.css'
+    //- - var buttonList = {'Еда 中国菜':'chanshaFood.html', 'Достопримечательности 名胜古迹':'#','Еще одна категория':'#'}
+    - var distTitles = {'Хунань 湖南':'chansha.html', 'Еда 中国菜':'chanshaFood.html'}
+
+block page
+    div(class="page")
+        block header
+            header
+                h1 Тест
+
+        block content 
+            div(class="test")
+                div
+                    img(src="img/meat2.jpg")
+                div 
+                    form(id="testForm")
+                        div.form 湘西酸肉
+                        div.form xiāngxī suānròu
+                        div.form
+                            input(type="text", id="test1", placeholder="Напишите перевод")
+                        div.form
+                            input(type="submit", value="Ответить", id="sub")
+                
+            div(class="test hidden")
+                div
+                    img(src="img/meat.jpg")
+                div 
+                    form(id="testForm2")
+                        div.form Тушенное мясо 
+                        div.form по рецепту семьи Мао
+                        div.form
+                            input(type="text", id="test2", placeholder="Напишите перевод иероглифами")
+                        div.form
+                            input(type="submit", value="Ответить", id="sub2")
+            div.next
+                input(type="image", src="img/testArrowRight.png", alt="", onClick="next()")
+
+            div(class="test2 hidden") Тест пройден!
+
+
+
+block append scripts 
+    script(src="scripts/test.js")

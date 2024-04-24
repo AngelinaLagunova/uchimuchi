@@ -1,5 +1,5 @@
-extends template.pug
-include mixin.pug 
+extends templates/template.pug
+include templates/mixin.pug 
 
 block variables
 
@@ -8,7 +8,7 @@ block variables
     - var buttonList = {'Путешествие 旅行':'map.html', 'Второй модуль':'#','Третий модуль':'#'}
     - var head = "Учи Мучи"
     - var title = "Главная"
-    - var css = 'index.css'
+    - var css = 'styles/index.css'
     - var distTitles = {}
 
 
@@ -21,3 +21,5 @@ block content
     article
         +createButtons(buttonList)
         
+
+//- pug index.pug --pretty -o ./dist/

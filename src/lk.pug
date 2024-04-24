@@ -1,12 +1,12 @@
-extends template.pug
-include mixin.pug 
+extends templates/template.pug
+include templates/mixin.pug 
 
 block variables
     - var dictMenu = {'Главная': 'index.html', 'Войти': "sign.html"} //войти должно смениться на выйти после авторизации/регистрации
     - var dictBar = {'home.png': 'index.html', 'lk.png': "lk.html"} //если пользователь не авторизовон, то лк перекидавает на войти
     - var head = "Личный кабинет"
     - var title = "Личный кабинет"
-    - var css = 'lk.css'
+    - var css = 'styles/lk.css'
     - var distTitles = {}
 
 
@@ -14,3 +14,6 @@ block variables
 
 block header 
     div #{title}
+
+
+//- pug lk.pug --pretty -o ./dist/

@@ -1,0 +1,41 @@
+mixin createMenu(menu, active)
+    each value, key in menu
+        if active == key
+            a.active(href= value)= key
+        else
+            a(href= value)= key
+
+mixin createBar(menu)
+    each value, key in menu
+        a(href= value)
+            img(src="img/"+key)
+
+mixin createBarTitle(menu)
+    each value, key in menu
+        a(href=value)=key
+
+mixin createButtons(list)
+    each value, key in list
+        div(class="wrap")
+            a(href=value)
+                button(class="button")= key
+
+mixin createCarousel(list)
+    - var i = 1
+    each item in list
+        div(class="spin hidden")
+            input(type="image", src="img/card.png", alt="Кнопка «input»", onClick="flesh()")
+            div
+                div(class="sound")
+                    img(src="img/sound.png")
+                div(class="char")=item.char
+                div(class="phen")=item.phen
+                div(class="count") #{i}/#{list.length}
+            div(class="hidden")
+                div(class="char")=item.trans
+                div(class="phen") 
+                    img(src='img/'+item.pict)
+                div(class="count") #{i}/#{list.length}
+        - i++
+                
+                
