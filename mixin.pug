@@ -1,0 +1,21 @@
+mixin createMenu(menu, active)
+    each value, key in menu
+        if active == key
+            a.active(href= value)= key
+        else
+            a(href= value)= key
+
+mixin createBar(menu)
+    each value, key in menu
+        a(href= value)
+            img(src=key)
+
+mixin createBarTitle(menu)
+    each value, key in menu
+        a(href= value)= key
+
+mixin createButtons(list)
+    each value, key in list
+        div(class="wrap")
+            a(href=value)
+                button(class="button")= key

@@ -1,0 +1,14 @@
+extends template.pug
+include mixin.pug 
+
+block variables
+    - var dictMenu = {'Главная': 'index.html', 'Войти': "sign.html"} //войти должно смениться на выйти после авторизации/регистрации
+    - var dictBar = {'home.png': 'index.html', 'lk.png': "lk.html"} //если пользователь не авторизовон, то лк перекидавает на войти
+    - var head = "Личный кабинет"
+    - var title = "Личный кабинет"
+    - var css = 'lk.css'
+
+
+
+block header 
+    div #{title}

@@ -1,0 +1,16 @@
+header img {
+    width:80%;
+}
+
+header {
+    display:grid;
+    width: 50vw;
+    grid-template-columns: 1fr 6fr;
+}
+
+article {
+    display:grid;
+    width: 70vw;
+    font-size:xx-large;
+    margin-top:5vw;
+}

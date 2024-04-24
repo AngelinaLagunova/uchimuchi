@@ -1,0 +1,43 @@
+.spin input {
+    display:grid;
+    width:100%;
+    margin:auto;
+}
+
+.spin {
+    width:40%;
+    position: relative;
+    text-align: center;
+    font-weight:bold;
+    font-size:xx-large;
+    margin:auto;
+
+
+}
+
+.char {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sound img{
+    position: absolute;
+    display: grid;
+    width:10%;
+    top: 10%;
+    left: 10%;
+}
+
+.phen{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.phen img {
+    margin-top:10%;
+    width:100%;
+}

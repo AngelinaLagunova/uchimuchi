@@ -1,0 +1,21 @@
+extends template.pug
+include mixin.pug 
+
+block variables
+    - var dictMenu = {'Главная': 'index.html', 'Войти': "sign.html"} //войти должно смениться на выйти после авторизации/регистрации
+    - var dictBar = {'home.png': 'index.html', 'lk.png': "lk.html", 'mapicon.png': 'map.html'} //если пользователь не авторизовон, то лк перекидавает на войти
+    - var head = "Путешествие 旅行"
+    - var title = "Путешествие 旅行"
+    - var css = 'map.css'
+
+block nav 
+
+block content
+    div(class="pict")
+        h1 #{title}
+        img(src="img/map1.png", usemap="#image-map")
+
+    map(name="image-map")
+            a(href="chansha.html")
+                area(target="", alt="", title="Провинция Хунань 湖南 г. Чанша 长沙市", coords="698,638,616,551", shape="rect")
+

@@ -1,0 +1,21 @@
+extends template.pug
+include mixin.pug 
+
+block variables
+
+    - var dictMenu = {'Главная': 'index.html', 'Войти': "sign.html"} //войти должно смениться на выйти после авторизации/регистрации
+    - var dictBar = {'home.png': 'index.html', 'lk.png': "lk.html"} //если пользователь не авторизовон, то лк перекидавает на войти
+    - var buttonList = {'Путешествие 旅行':'map.html', 'Второй модуль':'#','Третий модуль':'#'}
+    - var head = "Учи Мучи"
+    - var title = "Главная"
+    - var css = 'index.css'
+
+
+block header
+        div(class="header")
+            h1= head
+block content
+
+    article
+        +createButtons(buttonList)
+        

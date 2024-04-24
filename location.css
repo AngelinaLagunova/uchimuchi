@@ -1,0 +1,32 @@
+header img {
+    width:80%;
+}
+
+header {
+    display:grid;
+    width: 50vw;
+    grid-template-columns: 1fr 6fr;
+}
+
+article {
+    display:grid;
+    width: 100%;
+    /* font-size:large; */
+    grid-template-columns: 1fr 1fr;
+    /* margin-top:5vw; */
+}
+
+.info {
+    background:lightgrey;
+    border: thick solid rgba(79,209,197,.64);
+    padding: 1px 50px;
+    font-style: Courier, monospace;
+}
+
+.wrap {
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3vw;
+}

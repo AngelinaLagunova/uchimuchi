@@ -1,0 +1,43 @@
+include mixin.pug 
+block variables
+    - var dictMenu = {'Главная': 'index.html', 'Войти': "sign.html"}
+    - var dictBar = {'Главная': 'index.html', 'Войти': "sign.html"}
+    - var head = "Учи Мучи"
+    - var title = "Главная"
+doctype html
+html(lang="ru")
+    head
+        title #{title}
+        link(rel="stylesheet", href="template.css")
+        link(rel="stylesheet", href=css)
+        link(rel="stylesheet", href="buttons.css")
+
+    body
+        block nav
+            nav
+                div(class="bar")
+                    a(href='map.html') &#9776
+                div(class = "menu")
+                    +createMenu(dictMenu, title)
+        block bar
+            div(class="sidenav")
+                +createBar(dictBar)
+                +createBarTitle(distTitles)
+            
+            
+        block page 
+
+            div(class="page")
+                block header
+                block content
+    
+    block scripts
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(src="scroll.js")
+
+
+
+        //- block footer
+        //-     footer 
+        //-         hr 
+        //-         h4 &copy инфа какая-то про проект типа название компании, почта;
